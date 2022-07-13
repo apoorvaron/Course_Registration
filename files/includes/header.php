@@ -291,7 +291,7 @@
                     <table
                       class="table mb-0 table-hover align-middle text-nowrap"
                     >
-                      <tbody>
+                      <tbody id="adminPage">
                         <tr>
                           <td>
                             <div class='d-flex align-items-center'>

@@ -3,9 +3,8 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header("Content-Type: application/json; charset=UTF-8");
 
-    // include_once '/admin/dBconnection/database.php';
     include_once './database.php';
-    // include_once './apiFunc.php';
+    include_once './apiFunc.php';
     $method = $_SERVER['REQUEST_METHOD'];
 
 
@@ -76,6 +75,170 @@ function submitReg()
         }
 
 };
+function getAllStudent(){
+    $database = new Database();
+    $db = $database->connect();
+    
+    $get = new Post($db);
+
+    $result = $get->getStudents();
+
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            //    echo $row;
+            $post_item = array(
+                'id' => $row["id"],
+                'fName' => $row["fName"],
+                'lName' => $row["lName"],
+                'email' => $row["email"],
+                'phone' => $row["phone"],
+                'gender' => $row["gender"],
+                'course' => $row["course"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        $sendResponse = json_encode($posts_arr);
+
+        echo $sendResponse;
+
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+ 
+};
+function getWebStudent(){
+    $database = new Database();
+    $db = $database->connect();
+    
+    $get = new Post($db);
+
+    $result = $get->getWebStudents();
+
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            //    echo $row;
+            $post_item = array(
+                'id' => $row["id"],
+                'fName' => $row["fName"],
+                'lName' => $row["lName"],
+                'email' => $row["email"],
+                'phone' => $row["phone"],
+                'gender' => $row["gender"],
+                'course' => $row["course"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        $sendResponse = json_encode($posts_arr);
+
+        echo $sendResponse;
+
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+ 
+};
+function getAppStudent(){
+    $database = new Database();
+    $db = $database->connect();
+    
+    $get = new Post($db);
+
+    $result = $get->getAppStudents();
+
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            //    echo $row;
+            $post_item = array(
+                'id' => $row["id"],
+                'fName' => $row["fName"],
+                'lName' => $row["lName"],
+                'email' => $row["email"],
+                'phone' => $row["phone"],
+                'gender' => $row["gender"],
+                'course' => $row["course"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        $sendResponse = json_encode($posts_arr);
+
+        echo $sendResponse;
+
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+ 
+};
+function getDesignStudent(){
+    $database = new Database();
+    $db = $database->connect();
+    
+    $get = new Post($db);
+
+    $result = $get->getDesignStudents();
+
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            //    echo $row;
+            $post_item = array(
+                'id' => $row["id"],
+                'fName' => $row["fName"],
+                'lName' => $row["lName"],
+                'email' => $row["email"],
+                'phone' => $row["phone"],
+                'gender' => $row["gender"],
+                'course' => $row["course"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        $sendResponse = json_encode($posts_arr);
+
+        echo $sendResponse;
+
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+ 
+};
 
 
 $q = $_GET['q'];
@@ -86,7 +249,18 @@ switch ($q) {
         break;
     case 'submitReg':
         submitReg();
-
+        break;
+    case 'getAllStudent':
+        getAllStudent();
+        break;
+    case 'getWebStudent':
+        getWebStudent();
+        break;
+    case 'getAppStudent':
+        getAppStudent();
+        break;
+    case 'getDesignStudent':
+        getDesignStudent();
         break;
     default:
         echo "Invalid Query";

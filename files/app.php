@@ -1,97 +1,7 @@
 	<!-- nav bar -->
 	<?php
 	include("./includes/header.php");
-  // session_start();
-  // if(!$_SESSION['auth']){
-  //   header('location: ../../../login.php');
-  //   }
-  //   $now = time(); // Checking the time now when home page starts.
-
-  //   if ($now > $_SESSION['expire']) {
-  //       session_destroy();
-  //       header('location: auth/login.php');
-  //   }
 	?>
-  
-        <div class="container-fluid">
-          <!-- ============================================================== -->
-
-          <!-- Table -->
-          <!-- ============================================================== -->
-          <div class="row">
-            <!-- column -->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <!-- title -->
-                  <div class="d-md-flex">
-                    <div>
-                      <h4 class="card-title">Student Details</h4>
-                    </div>
-                  </div>
-                  <!-- title -->
-                  <div class="table-responsive">
-                    <table
-                      class="table mb-0 table-hover align-middle text-nowrap"
-                    >
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>S.No</h4>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>Name</h4>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>Email</h4>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>Phone No.</h4>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>Gender</h4>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class='d-flex align-items-center'>
-                              <div class='m-r-10'>
-                              </div>
-                              <div>
-                                <h4 class='m-b-0 font-16'>Course</h4>
-                              </div>
-                            </div>
-                          </td>
-
-                        </tr>
                         <?php
                           // Include config file
                           // require_once "config.php";
@@ -131,26 +41,6 @@
                           // Close connection
                           mysqli_close($link);
                         ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ============================================================== -->
-
-
-          <!-- ============================================================== -->
-          <!-- Recent comment and chats -->
-          <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
         <?php
 	include("./includes/footer.php")
 	?>

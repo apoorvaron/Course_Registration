@@ -270,3 +270,82 @@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+
+          <!-- Table -->
+          <!-- ============================================================== -->
+          <div class="row">
+            <!-- column -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <!-- title -->
+                  <div class="d-md-flex">
+                    <div>
+                      <h4 class="card-title">Student Details</h4>
+                    </div>
+                  </div>
+                  <!-- title -->
+                  <div class="table-responsive">
+                    <table
+                      class="table mb-0 table-hover align-middle text-nowrap"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>S.No</h4>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>Name</h4>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>Email</h4>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>Phone No.</h4>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>Gender</h4>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class='d-flex align-items-center'>
+                              <div class='m-r-10'>
+                              </div>
+                              <div>
+                                <h4 class='m-b-0 font-16'>Course</h4>
+                              </div>
+                            </div>
+                          </td>
+
+                        </tr>
